@@ -14,5 +14,6 @@ This code works only for MacOS.
 6. Save and put name of the code.
 7. System dialogs will pop up to ask permission. Click OK. I had two dialogs.
 8. There will be an Automator event appeared on your Calendar with summary of how you spent your time.
-![Screenshot 2022-02-20 at 15 13 01](https://user-images.githubusercontent.com/29375799/15489737-a7faf987-8343-4052-8866-313969f0b760.png)
+![Screenshot 2022-02-20 at 15 13 01](https://user-images.githubusercontent.com/29375799/154850023-721ee752-3a20-48a7-b908-23d13740ae24.png)
 9. Customize the Automator event to repeat, etc.
+
