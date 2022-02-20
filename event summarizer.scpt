@@ -57,7 +57,7 @@ tell application "Calendar"
 	-- Add the duration to the string variable
 	set strFinal to strFinal & " (Admin:" & totalDuration / hours & "h)"
 	
-	-- Create an event with the summary text 30 minutes after the current time
+	-- Create an event which summary text is the string variable, at 30 minutes after the current time
 	set theStartDate to (current date) + (30 * minutes)
 	tell calendar "Note"
 		make new event with properties {summary:strFinal, start date:theStartDate, end date:(theStartDate + (30 * minutes))}
