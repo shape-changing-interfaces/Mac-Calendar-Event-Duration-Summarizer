@@ -11,7 +11,7 @@ This code works only for MacOS.
 4. Drag it to the right window.
 5. Copy and paste the code.
 ![Screenshot 2022-02-20 at 15 06 08](https://user-images.githubusercontent.com/29375799/154849161-6140667f-4a54-495d-af38-9b13b30e53de.png)
-6. Save and put name of the code.
+6. Save and put name of the code from "event summarizer.scpt".
 7. System dialogs will pop up to ask permission. Click OK. I had two dialogs.
 8. There will be an Automator event appeared on your Calendar with summary of how you spent your time.
 ![Screenshot 2022-02-20 at 15 13 01](https://user-images.githubusercontent.com/29375799/154850023-721ee752-3a20-48a7-b908-23d13740ae24.png)
