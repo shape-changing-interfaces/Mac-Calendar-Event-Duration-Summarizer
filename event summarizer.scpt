@@ -19,43 +19,49 @@ set strFinal to ""
 tell application "Calendar"
 	-- Get duration of all events under "Research" calendar.
 	set totalDuration to 0
+	set tempDuration to 0
 	repeat with anEvent in (get events of calendar "Research")
 		if start date of anEvent > theStartDate and start date of anEvent < theEndDate then
-			set totalDuration to totalDuration + ((end date of anEvent) - (start date of anEvent))
+			set tempDuration to tempDuration + ((end date of anEvent) - (start date of anEvent))
 		end if
 	end repeat
 	-- Add the duration to a string variable
-	set strFinal to "R:" & totalDuration / hours & "h"
+	set strFinal to "R:" & tempDuration / hours & "h"
+	set totalDuration to totalDuration + tempDuration
 	
 	-- Get duration of all events under "Teaching" calendar.
-	set totalDuration to 0
+	set tempDuration to 0
 	repeat with anEvent in (get events of calendar "Teaching")
 		if start date of anEvent > theStartDate and start date of anEvent < theEndDate then
-			set totalDuration to totalDuration + ((end date of anEvent) - (start date of anEvent))
+			set tempDuration to tempDuration + ((end date of anEvent) - (start date of anEvent))
 		end if
 	end repeat
 	-- Add the duration to the string variable
-	set strFinal to strFinal & " T:" & totalDuration / hours & "h"
+	set strFinal to strFinal & " T:" & tempDuration / hours & "h"
+	set totalDuration to totalDuration + tempDuration
 	
 	-- Get duration of all events under "Other" calendar.
-	set totalDuration to 0
+	set tempDuration to 0
 	repeat with anEvent in (get events of calendar "Other")
 		if start date of anEvent > theStartDate and start date of anEvent < theEndDate then
-			set totalDuration to totalDuration + ((end date of anEvent) - (start date of anEvent))
+			set tempDuration to tempDuration + ((end date of anEvent) - (start date of anEvent))
 		end if
 	end repeat
 	-- Add the duration to the string variable
-	set strFinal to strFinal & " O:" & totalDuration / hours & "h"
+	set strFinal to strFinal & " O:" & tempDuration / hours & "h"
+	set totalDuration to totalDuration + tempDuration
 	
 	-- Get duration of all events that contains "Admin:" under "Other" calendar.
-	set totalDuration to 0
+	set tempDuration to 0
 	repeat with anEvent in (get events of calendar "Other")
 		if start date of anEvent > theStartDate and start date of anEvent < theEndDate and summary of anEvent contains "Admin:" then
-			set totalDuration to totalDuration + ((end date of anEvent) - (start date of anEvent))
+			set tempDuration to tempDuration + ((end date of anEvent) - (start date of anEvent))
 		end if
 	end repeat
 	-- Add the duration to the string variable
-	set strFinal to strFinal & " (Admin:" & totalDuration / hours & "h)"
+	set strFinal to strFinal & " (Admin:" & tempDuration / hours & "h)"
+
+	set strFinal to strFinal & " Total:" & totalDuration / hours & "h)"
 	
 	-- Create an event which summary text is the string variable, at 30 minutes after the current time
 	set theStartDate to (current date) + (30 * minutes)
