@@ -9,7 +9,7 @@ This code works only for MacOS.
 ![Screenshot 2022-02-20 at 15 05 18](https://user-images.githubusercontent.com/29375799/154849120-9bad8d13-ef58-4531-a5d3-048d7dbad696.png)
 3. Search for "Run AppleScript".
 4. Drag it to the right window.
-5. Copy and paste the code.
+5. Copy and paste the code in "event summarizer.scpt".
 ![Screenshot 2022-02-20 at 15 06 08](https://user-images.githubusercontent.com/29375799/154849161-6140667f-4a54-495d-af38-9b13b30e53de.png)
 6. Save and put name of the code from "event summarizer.scpt".
 7. System dialogs will pop up to ask permission. Click OK. I had two dialogs.
